@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Chat App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/script.js"></script>
+</head>
+<body>
+
+
+  
+  <div id="container">
+  <div id="room-form">
+    <h1>The Simple Chat Room</h1>
+    <h2>Join Room</h2>
+    <input type="text" id="room" placeholder="Room">
+    <br>
+    <input type="text" id="name" placeholder="Name">
+    <button onclick="joinRoom()">Join</button>
+    <p>Powered by: Zene</p>
+    <p style="font: bolder;"><a href="https://github.com/Zenephi">Vist my Github</a></p>
+  </div>
+
+  <div id="chat-form" style="display: none;">
+    <h1>Chat Room(<span id="myroom"></span>)</h1>
+    <div id="info">
+      <p>User: <span id="myname"></span> | Online: <span id="online-count"></span></p>
+    </div>
+   
+    <div id="message-box">
+    <ul id="messages"></ul>
+  </div>
+    <input type="text" id="message" placeholder="Message">
+    <button onclick="sendMessage()">Send</button>
+    <p>Powered by: Zene</p>
+    <p style="font: bolder;"><a href="https://github.com/Zenephi">Vist my Github</a></p>
+  </div>
+   </div>
+</body>
+</html>
